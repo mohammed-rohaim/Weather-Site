@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e bordas não afetem as dimensões totais */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define uma fonte padrão */
+    background-color: #f0f0f0; /* Cor de fundo suave para o corpo */
+}
+
+.container {
+    background-color: rgb(37, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do conteúdo */
+}
+
+.weather_container {
+    color: rgb(255, 253, 253);
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    max-width: 400px; /* Largura máxima para melhor leitura */
+    width: 100%;
+}
+
+.temp {
+    font-size: 4.5rem;
+    font-weight: bold; /* Texto em negrito */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.time-location {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.clima {
+    font-size: 1.2rem; /* Aumenta um pouco o tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+nav {
+    position: fixed;
+    bottom: 20px; /* Posiciona o nav na parte inferior */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a centralização */
+    width: 100%;
+    max-width: 400px; /* Largura máxima para o nav */
+    padding: 0 20px; /* Adiciona padding lateral */
+}
+
+form {
+    display: flex;
+    justify-content: space-between; /* Espaço entre o input e o botão */
+    gap: 10px; /* Espaço entre os elementos */
+}
+
+.search_area {
+    flex: 1; /* Ocupa o espaço disponível */
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+}
+
+.search_area::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search_button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #716969;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search_button:hover {
+    background-color: #353030;
+    border-bottom: 2px solid #43423f; /* Cor mais escura ao passar o mouse */
+}
+
+.search_area {
+    padding: 10px 15px; /* Padding maior para melhor conforto */
+    outline: none; /* Remove o contorno padrão */
+    background-color: rgba(104, 97, 97, 0.9); /* Cor de fundo com transparência */
+    color: rgb(3, 3, 3); /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Linha inferior branca */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave para todos os estilos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 200px; /* Largura fixa ou ajustável */
+}
+
+/* Efeito ao focar no campo */
+.search_area:focus {
+    background-color: rgb(92, 85, 85); /* Cor de fundo mais sólida ao focar */
+    border-bottom: 2px solid #7b786c; /* Linha inferior amarela ao focar */
+    box-shadow: 0 4px 8px rgba(249, 246, 246, 0.2); /* Sombra mais pronunciada */
+    transform: scale(1.02); /* Efeito de zoom sutil */
+}
+
+/* Placeholder personalizado */
+.search_area::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Cor do placeholder com transparência */
+    font-style: italic; /* Texto em itálico */
+}
+
+/* Efeito ao passar o mouse */
+.search_area:hover {
+    background-color: #353030; /* Cor de fundo ligeiramente mais escura */
+    border-bottom: 2px solid #43423f; /* Linha inferior amarela ao passar o mouse */
+}
+
+button {
+    padding: 10px 20px; /* Aumente o padding para um botão mais espaçoso */
+    color: rgb(144, 120, 120); /* Cor do texto */
+    background-color: #007BFF; /* Cor de fundo azul moderna */
+    border: none; /* Remove a borda padrão */
+    border-radius: 25px; /* Borda arredondada para um visual moderno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levantar o botão */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+/* Efeito ao clicar */
+button:active {
+    background-color: #004080; /* Cor de fundo ainda mais escura ao clicar */
+    transform: translateY(0); /* Retorna o botão à posição original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+}
